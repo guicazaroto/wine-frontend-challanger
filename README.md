@@ -2,23 +2,13 @@
 
 ## Project setup
 ```
-yarn install
+If you are using docker, run 'docker-compose up -d'
 ```
 
-### Compiles and hot-reloads for development
 ```
-yarn serve
+If you're not using docker, you will need:
+1 - Install node js.
+2 - Install vue-cli.
+3 - Run 'npm install'.
+4 - Run 'npm run server'.
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
