@@ -2,9 +2,10 @@
 
 ## Project setup
 ```
-If you are using docker, run:
+If you are using docker:
 
->> docker-compose up -d
+1 - add DOCKER_SERVER_PORT in .env file, like .env-example. 
+2 - run 'docker-compose up -d'.
 ```
 
 ```
