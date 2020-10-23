@@ -1,27 +1,26 @@
 <template>
   <div>
-    <header>
-      <ul class="menu">
-        <li class="menu__item">
-          <a class="menu__link" href="#">Clube</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Loja</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Produtores</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Ofertas</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Eventos</a>
-        </li>
-      </ul>
-    </header>
+    <NavBar :items="items" />
   </div>
 </template>
 
-<style lang="scss" scoped>
+<script>
+import NavBar from '@/components/NavBar'
 
-</style>
+export default {
+  components: {
+    NavBar
+  },
+  data () {
+    return {
+      items: [
+        { title: 'Clube', link: '#' },
+        { title: 'Loja', link: '#' },
+        { title: 'Produtores', link: '#' },
+        { title: 'Ofertas', link: '#' },
+        { title: 'Eventos', link: '#' }
+      ]
+    }
+  }
+}
+</script>
