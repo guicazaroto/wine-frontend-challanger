@@ -3,6 +3,7 @@
 
 .header {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  background: $white;
 }
 
 .header__container {
@@ -27,11 +28,10 @@
   color: $gray-dark;
   text-decoration: none;
   font-size: 1.25rem;
-  font-family: $font-default;
   padding-bottom: 28px;
   &:hover {
-    color: #b6116e;
-    border-bottom: 3px solid #b6116e;
+    color: $purple-dark;
+    border-bottom: 3px solid $purple-dark;
   }
 }
 

@@ -1,12 +1,18 @@
 <template>
   <div class="container">
-    <div class="banner mt-4">
-      <a href="#" class="banner__link">
-        <picture>
-          <source srcset="img/Banner-mobile.jpg" media="(max-width: 992px)" class="banner__img">
-          <img src="img/Banner.jpg" alt="" class="banner__img">
-        </picture>
-      </a>
-    </div>
+    <Banner />
+    <Products />
   </div>
 </template>
+
+<script>
+import Banner from '@/components/Banner'
+import Products from '@/components/Products'
+
+export default {
+  components: {
+    Banner,
+    Products
+  }
+}
+</script>
