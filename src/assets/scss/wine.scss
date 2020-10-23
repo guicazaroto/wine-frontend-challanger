@@ -1,8 +1,12 @@
-//variables and mixins
-@import 'styles/variables';
-@import 'styles/reset';
+// Variables and mixins
+@import 'core/variables';
+@import 'core/reset';
+@import 'mixins/margin';
 
 // Core CSS
-@import 'styles/typography';
-@import 'styles/navbar';
-@import 'styles/layout';
+@import 'core/typography';
+@import 'core/layout';
+
+// Components
+@import 'components/navbar';
+@import 'components/banner';
