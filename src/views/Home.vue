@@ -1,26 +1,12 @@
 <template>
-  <div>
-    <NavBar :items="items" />
+  <div class="container">
+    <div class="banner mt-4">
+      <a href="#" class="banner__link">
+        <picture>
+          <source srcset="img/Banner-mobile.jpg" media="(max-width: 992px)" class="banner__img">
+          <img src="img/Banner.jpg" alt="" class="banner__img">
+        </picture>
+      </a>
+    </div>
   </div>
 </template>
-
-<script>
-import NavBar from '@/components/NavBar'
-
-export default {
-  components: {
-    NavBar
-  },
-  data () {
-    return {
-      items: [
-        { title: 'Clube', link: '#' },
-        { title: 'Loja', link: '#' },
-        { title: 'Produtores', link: '#' },
-        { title: 'Ofertas', link: '#' },
-        { title: 'Eventos', link: '#' }
-      ]
-    }
-  }
-}
-</script>
