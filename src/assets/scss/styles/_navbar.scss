@@ -1,0 +1,17 @@
+@import 'src/assets/scss/styles/_variables.scss';
+
+.menu {
+  display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  height: 88px;
+  .menu__item {
+    list-style-type: none;
+    margin: 0 1rem;
+    .menu__link {
+      color: #666;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-family: $font-default;
+    }
+  }
+}
