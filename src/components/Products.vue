@@ -1,12 +1,58 @@
 <template>
-  <div class="products">
+  <div class="products mt-4">
     <div class="product__item">
-      <div class="product__img"></div>
-      <div class="product__info">
+      <div class="product__img">
         <img src="https://www.wine.com.br/cdn-cgi/image/q=99,f=auto,h=176/assets-images/produtos/19728-01.png" />
-        <h3 class="product__text">Vinho de chocolate com pimenta</h3>
-        <p class="product__text text--high">$ 35.50</p>
-        <button class="product__btn">Adicionar</button>
+      </div>
+      <div class="product__info">
+        <h3 class="product__description">Vinho de chocolate com pimenta</h3>
+        <div class="buy-box">
+          <span class="product__price">R$ 28,35</span>
+          <span class="product__customer">sócio wine</span>
+          <p class="product__member-price">
+            <span class="symbol">R$</span>
+            <span class="integer">35</span>
+            <span class="decimal">,50</span>
+          </p>
+          <button class="product__btn">Adicionar</button>
+        </div>
+      </div>
+    </div>
+    <div class="product__item">
+      <div class="product__img">
+        <img src="https://www.wine.com.br/cdn-cgi/image/q=99,f=auto,h=176/assets-images/produtos/19728-01.png" />
+      </div>
+      <div class="product__info">
+        <h3 class="product__description">Vinho de chocolate com pimenta</h3>
+        <div class="buy-box">
+          <span class="product__price">R$ 28,35</span>
+          <span class="product__customer">sócio wine</span>
+          <p class="product__member-price">
+            <span class="symbol">R$</span>
+            <span class="integer">35</span>
+            <span class="decimal">,50</span>
+          </p>
+          <button class="product__btn">Adicionar</button>
+        </div>
+      </div>
+    </div>
+    <!-- Item FINAL -->
+    <div class="product__item">
+      <div class="product__img">
+        <img src="https://www.wine.com.br/cdn-cgi/image/q=99,f=auto,h=176/assets-images/produtos/19728-01.png" />
+      </div>
+      <div class="product__info">
+        <h3 class="product__description">Vinho de chocolate com pimenta</h3>
+        <div class="buy-box">
+          <span class="product__price">R$ 28,35</span>
+          <span class="product__customer">sócio wine</span>
+          <p class="product__member-price">
+            <span class="symbol">R$</span>
+            <span class="integer">35</span>
+            <span class="decimal">,50</span>
+          </p>
+          <button class="product__btn">Adicionar</button>
+        </div>
       </div>
     </div>
   </div>
@@ -17,28 +63,3 @@ export default {
 
 }
 </script>
-
-<style>
-.product__item {
-  width: 30%;
-  box-shadow: 0 2px 5px rgba(0,0,0,.05);
-  background: #fff;
-}
-.product__text {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 16px;
-  color: #1D1D1B;
-}
-.text--high {
-  color: #c81a79;
-  font-size: 18px;
-}
-
-.product__btn {
-  background: #c81a79;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-}
-</style>
