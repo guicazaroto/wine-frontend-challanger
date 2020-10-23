@@ -1,6 +1,26 @@
 <template>
-  <h1 class="title-1">Home Page</h1>
+  <div>
+    <NavBar :items="items" />
+  </div>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<script>
+import NavBar from '@/components/NavBar'
+
+export default {
+  components: {
+    NavBar
+  },
+  data () {
+    return {
+      items: [
+        { title: 'Clube', link: '#' },
+        { title: 'Loja', link: '#' },
+        { title: 'Produtores', link: '#' },
+        { title: 'Ofertas', link: '#' },
+        { title: 'Eventos', link: '#' }
+      ]
+    }
+  }
+}
+</script>

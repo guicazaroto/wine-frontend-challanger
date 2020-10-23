@@ -1,2 +1,8 @@
-@import '_colors';
-$font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
+// font-family
+$font-default: 'Lato', 'Arial', sans-serif;
+
+// Media queries break-points
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
