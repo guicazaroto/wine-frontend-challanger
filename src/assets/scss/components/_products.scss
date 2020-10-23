@@ -44,25 +44,25 @@
   color: $purple-medium;
   font-weight: 700;
   .symbol {
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-right: 0.2rem;
   }
   .integer {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .decimal {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
 .product__btn {
   margin: 0.5rem 0;
   background: $purple-medium;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: none;
   color: #fff;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   padding: 0.8rem;
   width: 100%;
