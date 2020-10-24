@@ -1,8 +1,21 @@
-.cart-sidebar {
+.cart__wrapper {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  position: fixed;
+}
+
+.cart__sidebar {
   background: #F5F5F5;
   position: fixed;
-  display: none;
+  z-index: 999;
   right: 0;
   width: 350px;
   height: 100%;
+  overflow-x: hidden;
+}
+
+.sidebar--close {
+  width: 0;
 }

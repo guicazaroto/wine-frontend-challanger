@@ -1,8 +1,16 @@
 <template>
   <div>
     <!-- Shopping Cart sidebar -->
-    <Cart />
-
+    <div class="cart">
+      <div :class="['cart__sidebar', { 'sidebar--close': !isOpen }]">
+        <h1>Carrinho</h1>
+      </div>
+      <div
+        @click="toggleCart"
+        :class="['cart__wrapper', { 'sidebar--close': !isOpen }]"
+      />
+    </div>
+  
     <!-- Horizontal Navbar -->
     <header class="header">
       <div class="container header__container">
@@ -16,7 +24,7 @@
             <a class="navbar__link" :href="item.link">{{ item.title }}</a>
           </li>
         </ul>
-        <div @click="openCart" class="header__cart">
+        <div @click="toggleCart" class="header__cart">
           <img src="img/bag-icon.png" alt="carrinho de compras">
         </div>
       </div>
@@ -25,18 +33,23 @@
 </template>
 
 <script>
-import Cart from '@/components/Cart'
+// import Cart from '@/components/Cart'
 
 export default {
   props: {
     items: { type: Array, required: true }
   },
-  components: {
-    Cart
+  data () {
+    return {
+      isOpen: false
+    }
   },
   methods: {
-    openCart () {
-      console.log('abrir carrinho')
+    toggleCart () {
+      this.isOpen = !this.isOpen
+      if (this.isOpen) {
+        document.body.style.overflow = 'hidden'
+      }
     }
   }
 }
