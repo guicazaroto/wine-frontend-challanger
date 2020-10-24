@@ -13,7 +13,7 @@
           </li>
         </ul>
         <div class="header__bag">
-          <img src="img/bag-icon.svg" alt="carrinho de compras">
+          <img src="img/bag-icon.png" alt="carrinho de compras">
         </div>
       </div>
     </header>
