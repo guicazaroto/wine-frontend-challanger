@@ -3,6 +3,7 @@
     <!-- Shopping Cart sidebar -->
     <Cart />
 
+    <!-- Horizontal Navbar -->
     <header class="header">
       <div class="container header__container">
         <h1 class="header__logo">

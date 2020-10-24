@@ -1,5 +1,11 @@
 <template>
-  <h1>Carrinho</h1>
+  <div class="cart">
+    <div class="cart-wrapper">
+      <div class="cart-sidebar">
+        <h1>Carrinho</h1>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
