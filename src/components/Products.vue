@@ -16,6 +16,7 @@
           <button class="product__btn">Adicionar</button>
         </div>
       </div>
+      <button class="product__btn mobile">Adicionar</button>
     </div>
   </div>
 </template>
