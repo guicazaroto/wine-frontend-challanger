@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!-- Shopping Cart sidebar -->
+    <Cart />
+
     <header class="header">
       <div class="container header__container">
         <h1 class="header__logo">
@@ -12,7 +15,7 @@
             <a class="navbar__link" :href="item.link">{{ item.title }}</a>
           </li>
         </ul>
-        <div class="header__bag">
+        <div @click="openCart" class="header__cart">
           <img src="img/bag-icon.png" alt="carrinho de compras">
         </div>
       </div>
@@ -21,9 +24,19 @@
 </template>
 
 <script>
+import Cart from '@/components/Cart'
+
 export default {
   props: {
     items: { type: Array, required: true }
+  },
+  components: {
+    Cart
+  },
+  methods: {
+    openCart () {
+      console.log('abrir carrinho')
+    }
   }
 }
 </script>
