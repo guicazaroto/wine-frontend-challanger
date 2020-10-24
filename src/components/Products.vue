@@ -8,17 +8,35 @@
         <div class="product__info">
           <h3 class="product__description">{{ product.name }}</h3>
           <div class="buy-box">
-            <span class="product__price">R$ {{ product.priceStock }}</span>
-            <span class="product__customer">sócio wine</span>
-            <p class="product__member-price">
-              <span class="symbol">R$</span>
-              <span class="integer">{{ product.priceMember }}</span>
-            </p>
-            <button class="product__btn desktop">Adicionar</button>
+            <div v-if="product.available" class="price-info">
+              <span class="product__price">R$ {{ product.priceStock }}</span>
+              <span class="product__customer">sócio wine</span>
+              <p class="product__member-price">
+                <span class="symbol">R$</span>
+                <span class="integer">{{ product.priceMember }}</span>
+              </p>
+            </div>
+            <button
+              :class="[
+                'btn product__btn desktop',
+                {
+                  'btn--purple': product.available,
+                }]">
+              <span v-if="product.available">Adicionar</span>
+              <span v-else>Esgotado</span>
+            </button>
           </div>
         </div>
       </div>
-      <button class="product__btn mobile">Adicionar</button>
+      <button
+      :class="[
+        'btn product__btn mobile',
+        {
+          'btn--purple': product.available,
+        }]">
+        <span v-if="product.available">Adicionar</span>
+        <span v-else>Esgotado</span>
+      </button>
     </div>
   </div>
 </template>
