@@ -13,7 +13,7 @@ const actions = {
   updateTotal ({ state, commit }) {
     const products = state.data
 
-    if (!products.length) {
+    if (!products || !products.length) {
       commit('UPDATE_TOTAL', 0)
       return
     }
@@ -31,7 +31,7 @@ const actions = {
   updatePrice ({ commit }) {
     const products = state.data
 
-    if (!products.length) {
+    if (!products || !products.length) {
       commit('UPDATE_PRICE', 0)
       return
     }
