@@ -21,7 +21,7 @@
         </ul>
         <div @click="toggleCart" class="header__cart">
           <img class="cart__icon" src="img/bag-icon.png" alt="carrinho de compras">
-          <span class="cart__total">0</span>
+          <span class="cart__total">{{ total }}</span>
         </div>
       </div>
     </header>
@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import Cart from '@/components/Cart'
 
 export default {
@@ -42,6 +43,11 @@ export default {
     return {
       isOpen: false
     }
+  },
+  computed: {
+    ...mapState('cart', {
+      total: state => state.totalItens
+    }),
   },
   methods: {
     toggleCart () {
