@@ -9,11 +9,11 @@
           <h3 class="product__description">{{ product.name }}</h3>
           <div class="buy-box">
             <div v-if="product.available" class="price-info">
-              <span class="product__price">R$ {{ formatPrice(product.priceStock) }}</span>
+              <span class="product__price">R$ {{ formatBrl(product.priceStock) }}</span>
               <span class="product__customer">sócio wine</span>
               <p class="product__member-price">
                 <span class="symbol">R$</span>
-                <span class="integer">{{ formatPrice(product.priceMember) }}</span>
+                <span class="integer">{{ formatBrl(product.priceMember) }}</span>
               </p>
             </div>
             <button
@@ -46,6 +46,7 @@
 <script>
 import { mapActions, mapState } from 'vuex'
 import storageCart from '@/store/helpers/storageCart'
+import { formatBrl } from '@/utils/formatCurrency'
 
 export default {
   computed: {
@@ -55,19 +56,16 @@ export default {
     })
   },
   methods: {
+    formatBrl,
     ...mapActions({
       getProducts: "products/getProducts",
       updateCart: "cart/updateCart",
       addProduct: "cart/addProduct"
     }),
-    formatPrice (price) {
-      return price.toLocaleString('pt-BR', {
-        minimumFractionDigits: 2,  
-        maximumFractionDigits: 2
-      })
-    },
     addProduct (product) {
       storageCart.addProduct(product)
+      // update cart vuex store
+      this.updateCart()
     }
   },
   created () {

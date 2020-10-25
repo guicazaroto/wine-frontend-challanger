@@ -18,8 +18,6 @@ const addToLocalStorage = {
 
     // if already has an product, add quantity
     this.storeExistingProduct(product, data, productIndex)
-    // update cart vuex store
-    this.updateCart()
   },
   getStorage () {
     const localData = localStorage.getItem('products')
