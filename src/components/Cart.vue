@@ -15,7 +15,9 @@
           <div class="cart__info">
             <div class="cart__info__top">
               <p class="cart__product__title">{{ item.product.name }}</p>
-              <img class="product__remove" src="/img/close.svg">
+              <div @click="removeFromCart(item.product)">
+                <img class="product__remove" src="/img/close.svg">
+              </div>
             </div>
             <div class="cart__info__bottom">
               <div>
@@ -46,8 +48,9 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import { formatBrl } from '@/utils/formatCurrency'
+import storageCart from '@/store/helpers/storageCart'
 
 export default {
   props: {
@@ -59,9 +62,16 @@ export default {
     })
   },
   methods: {
+    ...mapActions({
+      updateCart: "cart/updateCart",
+    }),
     formatBrl,
     toggle () {
       this.$emit('toggle')
+    },
+    removeFromCart (product) {
+      storageCart.removeProduct(product)
+      this.updateCart()
     }
   }
 }

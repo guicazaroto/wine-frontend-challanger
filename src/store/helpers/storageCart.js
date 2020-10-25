@@ -10,7 +10,7 @@ const addToLocalStorage = {
     }
 
     // if has no one of current product then create this item
-    const productIndex = data.findIndex(x => x.product.name === product.name)
+    const productIndex = this.getProductIndex(data, product)
     if (productIndex === -1) {
       this.storeNewProduct(product, data)
       return
@@ -23,6 +23,9 @@ const addToLocalStorage = {
     const localData = localStorage.getItem('products')
     const data = JSON.parse(localData)
     return data
+  },
+  getProductIndex (data, product) {
+    return data.findIndex(x => x.product.name === product.name)
   },
   createNewStorage (product) {
     const store = []
@@ -40,6 +43,16 @@ const addToLocalStorage = {
   },
   setToLocalStorage (data) {
     localStorage.setItem('products', JSON.stringify(data))
+  },
+  removeProduct (product) {
+    const data = this.getStorage()
+    const productIndex = this.getProductIndex(data, product)
+
+    if (productIndex !== -1) {
+      data.splice(productIndex, 1)
+    }
+
+    this.setToLocalStorage(data)
   }
 }
 
