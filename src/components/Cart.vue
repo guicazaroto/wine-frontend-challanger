@@ -1,7 +1,12 @@
 <template>
   <div class="cart">
     <div :class="['cart__sidebar', { 'sidebar--close': !isOpen }]">
-      <h1>Carrinho</h1>
+      <div class="cart__header">
+        <div @click="toggle" class="cart__header__btn">
+          <img src="/img/icon_arrow_left.svg" alt="">
+        </div>
+        <h4 class="cart__header__title">WineBox (5)</h4>
+      </div>
     </div>
     <div
       @click="toggle"
