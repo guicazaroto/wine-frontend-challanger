@@ -1,5 +1,6 @@
 const addToLocalStorage = {
   addProduct (product) {
+    // debugger // eslint-disable-line 
     if (!product.available) return;
 
     // if has no one product then create storage

@@ -20,8 +20,10 @@
               </div>
             </div>
             <div class="cart__info__bottom">
-              <div>
-                <input type="text" style="width: 20px" :value="item.qtd">
+              <div class="cart__increment">
+                <button @click="removeItem">-</button>
+                <input type="text" :value="item.qtd">
+                <button @click="addItem(item)">+</button>
               </div>
               <span class="bottom__price">R$ {{ formatBrl(item.product.pricePromotional) }}</span>
             </div>
@@ -69,6 +71,11 @@ export default {
     },
     removeFromCart (product) {
       storageCart.removeProduct(product)
+      this.updateCart()
+    },
+    removeItem () {},
+    addItem(item) {
+      storageCart.addProduct(item.product)
       this.updateCart()
     }
   }
