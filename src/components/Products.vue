@@ -13,7 +13,7 @@
               <span class="product__customer">sócio wine</span>
               <p class="product__member-price">
                 <span class="symbol">R$</span>
-                <span class="integer">{{ formatBrl(product.priceMember) }}</span>
+                <span class="integer">{{ formatBrl(product.pricePromotional) }}</span>
               </p>
             </div>
             <button

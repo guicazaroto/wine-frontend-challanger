@@ -5,7 +5,7 @@
         <div @click="toggle" class="cart__header__btn">
           <img src="/img/icon_arrow_left.svg" alt="">
         </div>
-        <h4 class="cart__header__title">WineBox (5)</h4>
+        <h4 class="cart__header__title">WineBox ({{ totalItens }})</h4>
       </div>
       <div class="cart__body">
         <div v-for="item in cart" :key="item.product.name" class="cart__product">
@@ -31,7 +31,7 @@
       <div class="cart__footer">
         <div class="cart__subtotal">
           <span class="title">Subtotal</span>
-          <span class="price">R$ 299,34</span>
+          <span class="price">R$ {{ formatBrl(totalPrice) }}</span>
         </div>
         <button class="btn product__btn btn--green">Finalizar pedido</button>
       </div>
@@ -54,7 +54,9 @@ export default {
   },
   computed: {
     ...mapState('cart', {
-        cart: state => state.data
+        cart: state => state.data,
+        totalItens: state => state.totalItens,
+        totalPrice: state => state.totalPrice
     })
   },
   methods: {
