@@ -15,8 +15,24 @@
   margin-right: 3rem;
 }
 .header__cart {
-  cursor: pointer;
+  position: relative;
 }
+.cart__total {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  color: #5cb79f;
+  font-weight: 600;
+  display: flex;
+  font-size: 11px;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
+
 .navbar {
   width: 100%;
   display: flex;

@@ -20,7 +20,8 @@
           </li>
         </ul>
         <div @click="toggleCart" class="header__cart">
-          <img src="img/bag-icon.png" alt="carrinho de compras">
+          <img class="cart__icon" src="img/bag-icon.png" alt="carrinho de compras">
+          <span class="cart__total">0</span>
         </div>
       </div>
     </header>
