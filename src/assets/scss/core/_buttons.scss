@@ -10,8 +10,11 @@
   font-style: normal;
   font-weight: bold;
   padding: 0.8rem;
-}
 
+  &:focus {
+    outline: 0;
+  }
+}
 .btn--purple {
   background: $purple-dark;
 }
