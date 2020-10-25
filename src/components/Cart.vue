@@ -21,11 +21,7 @@
             </div>
             <div class="cart__info__bottom">
               <div>
-                <select>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                </select>
+                <input type="text" style="width: 20px" :value="item.qtd">
               </div>
               <span class="bottom__price">R$ {{ formatBrl(item.product.pricePromotional) }}</span>
             </div>
