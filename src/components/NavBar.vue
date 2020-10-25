@@ -1,15 +1,10 @@
 <template>
   <div>
     <!-- Shopping Cart sidebar -->
-    <div class="cart">
-      <div :class="['cart__sidebar', { 'sidebar--close': !isOpen }]">
-        <h1>Carrinho</h1>
-      </div>
-      <div
-        @click="toggleCart"
-        :class="['cart__wrapper', { 'sidebar--close': !isOpen }]"
-      />
-    </div>
+    <Cart
+      @toggle="toggleCart"
+      :is-open="isOpen"
+    />
   
     <!-- Horizontal Navbar -->
     <header class="header">
@@ -33,11 +28,14 @@
 </template>
 
 <script>
-// import Cart from '@/components/Cart'
+import Cart from '@/components/Cart'
 
 export default {
   props: {
     items: { type: Array, required: true }
+  },
+  components: {
+    Cart
   },
   data () {
     return {
@@ -47,9 +45,14 @@ export default {
   methods: {
     toggleCart () {
       this.isOpen = !this.isOpen
+      this.removeOverflow()
+    },
+    removeOverflow () {
       if (this.isOpen) {
         document.body.style.overflow = 'hidden'
-      }
+        return
+      } 
+      document.body.style.overflow = 'visible'
     }
   }
 }
