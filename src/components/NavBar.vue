@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import Cart from '@/components/Cart'
 
 export default {
@@ -49,7 +49,13 @@ export default {
       total: state => state.totalItens
     }),
   },
+  created () {
+    this.updateCart()  
+  },
   methods: {
+    ...mapActions({
+      updateCart: "cart/updateCart",
+    }),
     toggleCart () {
       this.isOpen = !this.isOpen
       this.removeOverflow()

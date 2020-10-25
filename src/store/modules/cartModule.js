@@ -9,13 +9,22 @@ const actions = {
     dispatch('updateTotal')
   },
   updateTotal ({ state, commit }) {
-    let total;
-    if (state.data.length > 1) {
-      total = state.data.reduce((cur, next) => cur.qtd + next.qtd)
-    } else {
-      total = state.data[0].qtd
+    const products = state.data
+
+    if (!products.length) {
+      commit('UPDATE_TOTAL', 0)
+      return
     }
-    commit('UPDATE_TOTAL', total)
+
+    if (products.length > 1) {
+      const total = products
+        .reduce((cur, next) => cur.qtd + next.qtd)
+
+      commit('UPDATE_TOTAL', total)
+      return
+    }
+
+    commit('UPDATE_TOTAL', products[0].qtd)
   }
 }
 
