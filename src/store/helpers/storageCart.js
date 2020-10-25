@@ -54,6 +54,17 @@ const addToLocalStorage = {
     }
 
     this.setToLocalStorage(data)
+  },
+  decrementItem (item) {
+    const data = this.getStorage()
+    const productIndex = this.getProductIndex(data, item.product)
+    
+    if (data[productIndex].qtd === 1) {
+      return
+    }
+
+    data[productIndex].qtd--
+    this.setToLocalStorage(data)
   }
 }
 
