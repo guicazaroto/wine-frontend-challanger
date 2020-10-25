@@ -59,9 +59,12 @@
 
 .cart__product {
  display: flex;
- border-bottom: 1px $gray-smooth solid;
  padding: 1rem;
  margin: 0 0.8rem;
+}
+
+.cart__product:not(:last-child) {
+  border-bottom: 1px $gray-smooth solid;
 }
 
 .cart__info {
