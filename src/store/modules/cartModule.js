@@ -39,14 +39,15 @@ const actions = {
     if (products.length > 1) {
       const total = products
         .reduce((cur, next) => {
-          return cur.product.pricePromotional + next.product.pricePromotional
+          return (cur.product.pricePromotional * cur.qtd ) + (next.product.pricePromotional * next.qtd)
         })
 
       commit('UPDATE_PRICE', total)
       return
     }
 
-    commit('UPDATE_PRICE', products[0].product.pricePromotional)
+    const total = products[0].product.pricePromotional * products[0].qtd
+    commit('UPDATE_PRICE', total)
 
   }
 }
