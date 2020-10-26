@@ -33,16 +33,26 @@ describe('components/NavBar', () => {
       store,
       localVue,
       propsData: {
-        items: []
+        items: [
+          { title: 'Home',link: '/' },
+          { title: 'Clube', link: '/clube' }
+        ]
       },
     })
     
   })
 
+  it('should render menu items', () => {
+    expect(wrapper.findAll('.navbar__link').at(0).text()).toBe('Home')
+    expect(wrapper.findAll('.navbar__link').at(0).attributes().href).toBe('/')
+
+    expect(wrapper.findAll('.navbar__link').at(1).text()).toBe('Clube')
+    expect(wrapper.findAll('.navbar__link').at(1).attributes().href).toBe('/clube')
+  })
+
   it('should show NavBar total items in cart icon', () => {
     expect(wrapper.find('.cart__total')
     .text().trim()).toEqual('5')
-
   })
 
   it('change cart state (open/close) when click in the icon', () => {
