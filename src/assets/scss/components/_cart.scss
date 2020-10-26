@@ -40,7 +40,7 @@
   margin-right: 1rem;
 }
 .cart__header__title {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
@@ -89,7 +89,7 @@
 
   .bottom__price {
     color: $purple-medium;
-    font-size: 20px;
+    font-size: 1.25;
     font-weight: 700;
   }
 }
@@ -100,7 +100,7 @@
   border: 1px solid $gray-smooth;
   border-radius: 3%;
   input {
-    width: 20px;
+    width: 1.25rem;
     text-align: center;
     border: none;
     background: transparent;
@@ -110,7 +110,7 @@
     height: 30px;
     border: none;
     background: transparent;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 700;
     color: $gray-dark;
     &:focus {
@@ -124,7 +124,7 @@
 
 
 .cart__product__title {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   line-height: 16px;
   padding-right: 1rem;
@@ -142,13 +142,13 @@
 
   .title {
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 0.625rem;
     color: $gray-dark;
     font-weight: 600;
   }
 
   .price {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: $purple-medium;
   }
