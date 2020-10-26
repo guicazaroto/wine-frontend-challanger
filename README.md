@@ -1,18 +1,19 @@
 # wine-frontend-challanger
+Este projeto está rodando em https://wine-challanger.herokuapp.com/
 
-## Project setup
+## Inicialização do projeto
 ```
-If you are using docker:
+Se você está usando docker:
 
-1 - add DOCKER_SERVER_PORT and VUE_APP_API into .env file, like .env-example. 
-2 - run 'docker-compose up -d'.
+1 - adicione DOCKER_SERVER_PORT e VUE_APP_API no .env, usando como referência o .env-example. 
+2 - rode: 'docker-compose up -d'.
 ```
 
 ```
-If you're not using docker, you will need:
+Se você não está usando o docker, vai precisar:
 
-1 - Install node js.
-2 - Install vue-cli.
-3 - Run 'npm install'.
-4 - Run 'npm run server'.
+1 - Instalar o node js.
+2 - Instalar o vue-cli.
+3 - Rodar 'npm install'.
+4 - Rodar 'npm run server'.
 ```
