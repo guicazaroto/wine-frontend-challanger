@@ -10,8 +10,12 @@ class ProductsRepository {
   }
 
   async getAll () {
-    const res = await this.client.get(`/${resource}`)
-    return res
+    try {
+      const res = await this.client.get(`/${resource}`)
+      return res
+    } catch (err) {
+      console.log(err)
+    }
   }
 }
 
