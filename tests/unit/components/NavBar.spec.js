@@ -9,6 +9,7 @@ describe('components/NavBar', () => {
   let store
   let actions
   let state
+  let wrapper
 
   beforeEach(() => {
     actions = {
@@ -26,20 +27,25 @@ describe('components/NavBar', () => {
           state
         }
       }
-    })  
-  })
-
-  it('should show NavBar total items in cart icon', () => {
-    const wrapper = shallowMount(NavBar, {
+    }) 
+    
+    wrapper = shallowMount(NavBar, {
       store,
       localVue,
       propsData: {
         items: []
       },
     })
+    
+  })
 
+  it('should show NavBar total items in cart icon', () => {
     expect(wrapper.find('.cart__total')
-    .text().trim()).not.toEqual('5')
+    .text().trim()).toEqual('5')
+
+  })
+
+  it('change cart state (open/close) when click in the icon', () => {
 
   })
 })
