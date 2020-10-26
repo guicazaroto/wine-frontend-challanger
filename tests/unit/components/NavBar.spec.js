@@ -46,6 +46,12 @@ describe('components/NavBar', () => {
   })
 
   it('change cart state (open/close) when click in the icon', () => {
-
+    // open cart
+    wrapper.find('.header__cart').trigger('click')
+    expect(wrapper.vm.isOpen).toBe(true)
+    
+    // close cart
+    wrapper.find('.header__cart').trigger('click')
+    expect(wrapper.vm.isOpen).toBe(false)
   })
 })
