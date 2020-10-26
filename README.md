@@ -4,7 +4,7 @@
 ```
 If you are using docker:
 
-1 - add DOCKER_SERVER_PORT in .env file, like .env-example. 
+1 - add DOCKER_SERVER_PORT and VUE_APP_API into .env file, like .env-example. 
 2 - run 'docker-compose up -d'.
 ```
 
