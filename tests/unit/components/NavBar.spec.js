@@ -29,7 +29,7 @@ describe('components/NavBar', () => {
     })  
   })
 
-  it('should open cart when click in button', () => {
+  it('should show NavBar total items in cart icon', () => {
     const wrapper = shallowMount(NavBar, {
       store,
       localVue,
